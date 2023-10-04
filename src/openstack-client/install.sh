@@ -31,7 +31,7 @@ require_pip() {
 # echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
 
 require_pip
-if "${OPENSTACK_CLIENT_VERSION}" != "latest" ; then
+if [ "${OPENSTACK_CLIENT_VERSION}" != "latest" ] ; then
     pip install python-openstackclient=="${OPENSTACK_CLIENT_VERSION}"
 else
     pip install python-openstackclient
