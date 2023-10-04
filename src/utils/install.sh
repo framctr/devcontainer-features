@@ -9,7 +9,7 @@ if [ "${UNMINIMIZE}" = "true" ] ; then
         exit 1
     fi
     
-    (echo y | unminimize)
+    apt update && apt upgrade -y && (echo y | unminimize)
 fi
 
 utils=""
@@ -38,7 +38,7 @@ if [ "${JQ}" = "true" ] ; then
     utils="${utils} jq"
 fi
 
-apt-get install -y $utils
+apt-get update && apt-get install -y $utils
 
 if [ "${YQ}" = "true" ] ; then
     wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
