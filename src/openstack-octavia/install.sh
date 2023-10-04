@@ -16,6 +16,6 @@ $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-contrib/features/pipx-package:1.1.7" \
-    --option package='python-octaviaclient' --option version="$VERSION" --option include-deps
+    --option package='python-octaviaclient' --option version="$VERSION" --include-deps
 
 echo 'Done!'
