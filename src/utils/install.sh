@@ -1,17 +1,6 @@
 #!/bin/sh
 set -e
 
-. /etc/os-release
-
-if [ "${UNMINIMIZE}" = "true" ] ; then
-    if [ "${ID}" != "ubuntu" ] ; then
-        echo "Unminimize works only on ubuntu! Found ${ID}."
-        exit 1
-    fi
-    
-    apt update && apt upgrade -y && (echo y | unminimize)
-fi
-
 utils=""
 
 if [ "${PING}" = "true" ] ; then

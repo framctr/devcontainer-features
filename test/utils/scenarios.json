@@ -3,7 +3,6 @@
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "utils": {
-                "unminimize": true,
                 "ping": true,
                 "ipcalc": true,
                 "curl": true,

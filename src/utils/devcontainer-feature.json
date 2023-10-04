@@ -3,13 +3,8 @@
     "version": "0.0.1",
     "name": "Utilities",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/utils",
-    "description": "Install an up-to-date version of various utilities and unminimize the Ubuntu image.",
+    "description": "Install an up-to-date version of various utilities.",
     "options": {
-        "unminimize": {
-            "type": "boolean",
-            "default": true,
-            "description": "Unminimize the Ubuntu image. Useful if you want to get a complete Ubuntu devenvironment with, for example, the man binary."
-        },
         "ping": {
             "type": "boolean",
             "default": true,

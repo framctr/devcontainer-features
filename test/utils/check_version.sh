@@ -9,7 +9,6 @@ set -e
 # Provides the 'check' and 'reportResults' commands.
 source dev-container-features-test-lib
 
-check "execute command" bash -c "man --version"
 check "execute command" bash -c "ping -V"
 check "execute command" bash -c "ipcalc --version"
 check "execute command" bash -c "curl --version"
