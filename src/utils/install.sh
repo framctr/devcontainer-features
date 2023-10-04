@@ -7,6 +7,7 @@ if [ "${UNMINIMIZE}" = "true" ] ; then
     if [ "${ID}" != "ubuntu" ] ; then
         echo "Unminimize works only on ubuntu! Found ${ID}."
         exit 1
+    fi
     
     (echo y | unminimize)
 fi
