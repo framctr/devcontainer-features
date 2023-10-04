@@ -1,0 +1,17 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "utils": {
+                "unminimize": true,
+                "ping": true,
+                "ipcalc": true,
+                "curl": true,
+                "wget": true,
+                "jq": true,
+                "yq": true
+            }
+        },
+        "remoteUser": "vscode"
+    }
+}

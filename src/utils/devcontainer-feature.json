@@ -1,0 +1,52 @@
+{
+    "id": "utils",
+    "version": "0.0.1",
+    "name": "Utilities",
+    "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/utils",
+    "description": "Install an up-to-date version of various utilities and unminimize the Ubuntu image.",
+    "options": {
+        "unminimize": {
+            "type": "boolean",
+            "default": true,
+            "description": "Unminimize the Ubuntu image. Useful if you want to get a complete Ubuntu devenvironment with, for example, the man binary."
+        },
+        "ping": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install ping"
+        },
+        "ipcalc": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install ipcalc"
+        },
+        "curl": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install curl"
+        },
+        "wget": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install wget"
+        },
+        "pip": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install pip"
+        },
+        "jq": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install jq"
+        },
+        "yq": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install yq"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
