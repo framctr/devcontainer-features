@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-echo "Activating feature 'openstack-client'"
-
 . ./library_scripts.sh
 
 # nanolayer is a cli utility which keeps container layers as small as possible
@@ -22,15 +20,15 @@ install_package() {
         install \
         devcontainer-feature \
         "ghcr.io/devcontainers-contrib/features/pipx-package:${pipx_pkg_version}" \
-        --option package="${package_name}" --option version="${package_version}"
+        --option package="${package_name}" --option version="${package_version}" --option injections="python-octaviaclient"
 }
 
 # Install primary client
 install_package python-openstackclient "$VERSION"
 
 # Install other packages
-if [ "${OCTAVIA}" != "none" ] ; then
-    install_package python-octaviaclient "$OCTAVIA"
-fi
+# if [ "${OCTAVIA}" != "none" ] ; then
+#     install_package_with_pip python-octaviaclient "$OCTAVIA"
+# fi
 
 echo 'Done!'
