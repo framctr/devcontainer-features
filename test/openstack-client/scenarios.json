@@ -1,16 +1,10 @@
 {
-    "check_default_version": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "openstack-client": {}
-        },
-        "remoteUser": "vscode"
-    },
     "check_latest_version": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "openstack-client": {
-                "version": "latest"
+                "version": "latest",
+                "octavia": "latest"
             }
         }
     },
@@ -18,7 +12,8 @@
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "openstack-client": {
-                "version": "6.2.0"
+                "version": "6.2.0",
+                "octavia": "3.5.0"
             }
         },
         "remoteUser": "vscode"

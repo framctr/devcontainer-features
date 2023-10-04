@@ -12,10 +12,25 @@ echo "Activating feature 'openstack-client'"
 # of the script
 ensure_nanolayer nanolayer_location "v0.5.0"
 
-$nanolayer_location \
-    install \
-    devcontainer-feature \
-    "ghcr.io/devcontainers-contrib/features/pipx-package:1.1.7" \
-    --option package='python-openstackclient' --option version="$VERSION"
+pipx_pkg_version="1.1.7"
+
+install_package() {
+    local package_name="$1"
+    local package_version="$2"
+
+    $nanolayer_location \
+        install \
+        devcontainer-feature \
+        "ghcr.io/devcontainers-contrib/features/pipx-package:${pipx_pkg_version}" \
+        --option package="${package_name}" --option version="${package_version}"
+}
+
+# Install primary client
+install_package python-openstackclient "$VERSION"
+
+# Install other packages
+if [ "${OCTAVIA}" != "none" ] ; then
+    install_package python-octaviaclient "$OCTAVIA"
+fi
 
 echo 'Done!'

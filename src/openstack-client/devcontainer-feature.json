@@ -1,6 +1,6 @@
 {
     "id": "openstack-client",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "name": "OpenStack Client (from pipx)",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/openstack-client",
     "description": "Install an up-to-date version of OpenStack client with pipx.",
@@ -12,6 +12,15 @@
             ],
             "default": "latest",
             "description": "Select or enter an OpenStack client version."
+        },
+        "octavia": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "latest",
+            "description": "Select or enter an OpenStack Octavia client version. To avoid installation use \"none\"."
         }
     },
     "installsAfter": [
