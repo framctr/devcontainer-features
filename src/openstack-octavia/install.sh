@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-echo "Activating feature 'openstack-client'"
+echo "Activating feature 'openstack-octavia'"
 
 . ./library_scripts.sh
 
