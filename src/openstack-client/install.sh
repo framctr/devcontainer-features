@@ -4,6 +4,19 @@ set -e
 echo "Activating feature 'openstack-client'"
 OPENSTACK_CLIENT_VERSION="${VERSION}"
 
+# Clean up
+rm -rf /var/lib/apt/lists/*
+
+if [ "$(id -u)" -ne 0 ]; then
+    echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
+    exit 1
+fi
+
+require_pip() {
+    if [ -z "$(which pip)" ] ; then
+        apt-get update && apt-get install -y pip
+    fi
+}
 
 # The 'install.sh' entrypoint script is always executed as the root user.
 #
@@ -17,6 +30,7 @@ OPENSTACK_CLIENT_VERSION="${VERSION}"
 # echo "The effective dev container containerUser is '$_CONTAINER_USER'"
 # echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
 
+require_pip
 if "${OPENSTACK_CLIENT_VERSION}" != "latest" ; then
     pip install python-openstackclient=="${OPENSTACK_CLIENT_VERSION}"
 else
