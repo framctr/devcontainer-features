@@ -21,3 +21,4 @@ if "${OPENSTACK_CLIENT_VERSION}" != "latest" ; then
     pip install python-openstackclient=="${OPENSTACK_CLIENT_VERSION}"
 else
     pip install python-openstackclient
+fi
