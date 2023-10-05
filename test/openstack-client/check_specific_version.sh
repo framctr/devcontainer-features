@@ -9,7 +9,7 @@ source dev-container-features-test-lib
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "execute command" bash -c "openstack --version | grep 6.3.0"
+check "openstack --version | grep 6.3.0" openstack --version | grep "6.3.0"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
