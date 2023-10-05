@@ -20,9 +20,9 @@ install_package() {
     echo "Installing $package_name (version $package_version)..."
 
     if [ "$package_version" != "latest" ] ; then
-        pip install "${package_name}"=="${package_version}"
+        pip install "python-${package_name}client"=="${package_version}"
     else
-        pip install "${package_name}"
+        pip install "python-${package_name}client"
     fi
 
     echo "Installed"
