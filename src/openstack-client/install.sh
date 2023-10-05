@@ -14,6 +14,8 @@ install_package() {
     local package_name="$1" | tr '[:upper:]' '[:lower:]' # convert to lowercase
     local package_version="$2"
 
+    echo "Installing $package_name (version $package_version)..."
+
     $nanolayer_location install apt-get pip,python3-dev,gcc
 
     if [ "$package_version" != "latest" ] ; then
@@ -21,6 +23,8 @@ install_package() {
     else
         pip install "${package_name}"
     fi
+
+    echo "Installed"
 }
 
 # Install primary client
