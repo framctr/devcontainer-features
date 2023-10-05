@@ -1,7 +1,7 @@
 
-# OpenStack Client (from pip) (openstack-client)
+# OpenStack Client (from pipx) (openstack-client)
 
-Install an up-to-date version of OpenStack client with pip.
+Install an up-to-date version of OpenStack client with pipx.
 
 ## Example Usage
 
@@ -16,12 +16,13 @@ Install an up-to-date version of OpenStack client with pip.
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | version | Select or enter an OpenStack client version. | string | latest |
+| octavia | Select or enter an OpenStack Octavia client version. To avoid installation use "none". | string | latest |
 
 
 
 ## OS Support
 
-This Feature should work on recent versions of Debian/Ubuntu-based distributions with the `pip` package manager installed.
+This Feature should work on recent versions of Debian/Ubuntu-based distributions.
 
 
 ---
