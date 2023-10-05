@@ -26,5 +26,14 @@
             }
         },
         "remoteUser": "vscode"
+    },
+    "check_specific_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "openstack-client": {
+                "version": "6.3.0"
+            }
+        },
+        "remoteUser": "vscode"
     }
 }
