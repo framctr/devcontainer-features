@@ -10,8 +10,6 @@ set -e
 # of the script
 ensure_nanolayer nanolayer_location "v0.5.0"
 
-pipx_pkg_version="1.1.7"
-
 install_package() {
     local package_name="$1"
     local package_version="$2"
