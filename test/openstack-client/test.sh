@@ -10,6 +10,7 @@ set -e
 source dev-container-features-test-lib
 
 check "execute command" bash -c "openstack --version"
+check "execute command" bash -c "pip list installed | grep python-octaviaclient"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
