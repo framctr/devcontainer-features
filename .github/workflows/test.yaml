@@ -26,7 +26,7 @@ jobs:
         run: npm install -g @devcontainers/cli
 
       - name: "Generating tests for '${{ matrix.features }}' against '${{ matrix.baseImage }}'"
-        run: devcontainer features test --skip-scenarios -f ${{ matrix.features }} -i ${{ matrix.baseImage }} .
+        run: devcontainer features test --skip-scenarios -f ${{ matrix.features }} -i ${{ matrix.baseImage }} --skip-duplicated .
 
   test-scenarios:
     runs-on: ubuntu-latest
