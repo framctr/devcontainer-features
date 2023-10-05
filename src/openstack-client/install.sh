@@ -16,7 +16,7 @@ install_package() {
     local package_name="$1"
     local package_version="$2"
 
-    $nanolayer_location install apt-get pip python3-dev gcc
+    $nanolayer_location install apt-get pip,python3-dev,gcc
     if [ "$package_version" != "latest" ] ; then
         pip install "${package_name}"=="${package_version}"
     else
