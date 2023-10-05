@@ -11,12 +11,13 @@ set -e
 ensure_nanolayer nanolayer_location "v0.5.0"
 
 install_package() {
-    local package_name="$1" | tr '[:upper:]' '[:lower:]' # convert to lowercase
+    local package_name=$(echo "$1" | tr '[:upper:]' '[:lower:]') # convert to lowercase
     local package_version="$2"
 
-    echo "Installing $package_name (version $package_version)..."
 
     $nanolayer_location install apt-get pip,python3-dev,gcc
+    
+    echo "Installing $package_name (version $package_version)..."
 
     if [ "$package_version" != "latest" ] ; then
         pip install "${package_name}"=="${package_version}"
@@ -28,7 +29,7 @@ install_package() {
 }
 
 # Install primary client
-install_package python-openstackclient "$VERSION"
+install_package openstack "$VERSION"
 
 # Install other clients
 if [ "${BARBICAN}" != "none" ] ; then
