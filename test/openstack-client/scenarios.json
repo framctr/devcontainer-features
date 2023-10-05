@@ -4,7 +4,25 @@
         "features": {
             "openstack-client": {
                 "version": "latest",
-                "octavia": "latest"
+                "barbican": "latest",
+                "ceilometer": "latest",
+                "cinder": "latest",
+                "cloudkitty": "latest",
+                "designate": "latest",
+                "fuel": "latest",
+                "glance": "latest",
+                "gnocchi": "latest",
+                "heat": "latest",
+                "magnum": "latest",
+                "manila": "latest",
+                "mistral": "latest",
+                "monasca": "latest",
+                "murano": "latest",
+                "octavia": "latest",
+                "sahara": "latest",
+                "senlin": "latest",
+                "swift": "latest",
+                "trove": "latest"
             }
         }
     },
