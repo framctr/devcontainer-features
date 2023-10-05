@@ -16,19 +16,20 @@ install_package() {
     local package_name="$1"
     local package_version="$2"
 
-    $nanolayer_location \
-        install \
-        devcontainer-feature \
-        "ghcr.io/devcontainers-contrib/features/pipx-package:${pipx_pkg_version}" \
-        --option package="${package_name}" --option version="${package_version}" --option injections="python-octaviaclient"
+    $nanolayer_location install apt-get pip python3-dev gcc
+    if [ "$package_version" != "latest" ] ; then
+        pip install "${package_name}"=="${package_version}"
+    else
+        pip install "${package_name}"
+    fi
 }
 
 # Install primary client
 install_package python-openstackclient "$VERSION"
 
 # Install other packages
-# if [ "${OCTAVIA}" != "none" ] ; then
-#     install_package_with_pip python-octaviaclient "$OCTAVIA"
-# fi
+if [ "${OCTAVIA}" != "none" ] ; then
+    install_package python-octaviaclient "$OCTAVIA"
+fi
 
 echo 'Done!'
