@@ -57,7 +57,7 @@ prefixed_projects=(\
     GLANCE \
     GLARE \
     HEAT \
-    IRONIC-INSPECTOR- \
+    # IRONIC-INSPECTOR- \
     IRONIC \
     KARBOR \
     KEYSTONE \
