@@ -31,7 +31,7 @@ install_package() {
 $nanolayer_location install apt-get pip,python3-dev,gcc
 
 # Install primary client
-install_package openstack "$VERSION"
+install_package python-openstack "$VERSION"
 
 # Install other clients
 
@@ -57,7 +57,6 @@ prefixed_projects=(\
     GLANCE \
     GLARE \
     HEAT \
-    # IRONIC-INSPECTOR- \
     IRONIC \
     KARBOR \
     KEYSTONE \
