@@ -32,7 +32,7 @@ install_package() {
 install_package openstack "$VERSION"
 
 # Install other clients
-projects=(\
+projects=( \
     BARBICAN \
     CEILOMETER \
     CINDER \
@@ -51,10 +51,10 @@ projects=(\
     SAHARA \
     SENLIN \
     SWIFT \
-    TROVE
+    TROVE \
 )
 
-for project in ${projects} ; do
+for project in ${projects[@]} ; do
     # ${project}  # variable name
     # ${!project} # variable value
     
