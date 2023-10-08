@@ -13,6 +13,15 @@
             "default": "latest",
             "description": "Select or enter an OpenStack client version."
         },
+        "aodh": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Alarming as a Service client version. To avoid installation use \"none\"."
+        },
         "barbican": {
             "type": "string",
             "proposals": [
@@ -20,7 +29,16 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Barbican client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Barbican Key Management API client version. To avoid installation use \"none\"."
+        },
+        "blazar": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Blazar Reservation Service client version. To avoid installation use \"none\"."
         },
         "ceilometer": {
             "type": "string",
@@ -29,7 +47,7 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Ceilometer client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Ceilometer API client version. To avoid installation use \"none\"."
         },
         "cinder": {
             "type": "string",
@@ -38,7 +56,7 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Cinder client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Cinder Volume API client version. To avoid installation use \"none\"."
         },
         "cloudkitty": {
             "type": "string",
@@ -47,7 +65,25 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Cloudkitty client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Cloudkitty Rating as a Service API client version. To avoid installation use \"none\"."
+        },
+        "congress": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Congress (open policy framework for the cloud) client version. To avoid installation use \"none\"."
+        },
+        "cyborg": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Cyborg API client version. To avoid installation use \"none\"."
         },
         "designate": {
             "type": "string",
@@ -56,17 +92,26 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Designate client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Designate API client version. To avoid installation use \"none\"."
         },
-        "fuel": {
+        "freezer": {
             "type": "string",
             "proposals": [
                 "latest",
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Fuel client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Freezer (backup restore and disaster recovery service) client version. To avoid installation use \"none\"."
         },
+        // "fuel": {
+        //     "type": "string",
+        //     "proposals": [
+        //         "latest",
+        //         "none"
+        //     ],
+        //     "default": "none",
+        //     "description": "Select or enter an OpenStack Fuel client version. To avoid installation use \"none\"."
+        // },
         "glance": {
             "type": "string",
             "proposals": [
@@ -76,14 +121,14 @@
             "default": "none",
             "description": "Select or enter an OpenStack Glance client version. To avoid installation use \"none\"."
         },
-        "gnocchi": {
+        "glare": {
             "type": "string",
             "proposals": [
                 "latest",
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Gnocchi client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack GLare Artifact REpository API client version. To avoid installation use \"none\"."
         },
         "heat": {
             "type": "string",
@@ -94,6 +139,51 @@
             "default": "none",
             "description": "Select or enter an OpenStack Heat client version. To avoid installation use \"none\"."
         },
+        "hplefthand": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack HP LeftHand/StoreVirtual HTTP REST client version. To avoid installation use \"none\"."
+        },
+        "ironic-inspector-": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Ironic Inspector client version. To avoid installation use \"none\"."
+        },
+        "ironic": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Ironic (bare metal Service) client version. To avoid installation use \"none\"."
+        },
+        "karbor": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Karbor API client version. To avoid installation use \"none\"."
+        },
+        "keystone": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Keystone API client version. To avoid installation use \"none\"."
+        },
         "magnum": {
             "type": "string",
             "proposals": [
@@ -101,7 +191,7 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Magnum client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Magnum API client version. To avoid installation use \"none\"."
         },
         "manila": {
             "type": "string",
@@ -110,7 +200,7 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Manila client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Manila (shared file system as a service) client version. To avoid installation use \"none\"."
         },
         "mistral": {
             "type": "string",
@@ -119,7 +209,7 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Mistral client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Mistral (Workflow as a Service) client version. To avoid installation use \"none\"."
         },
         "monasca": {
             "type": "string",
@@ -128,7 +218,7 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Monasca client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Monasca API client version. To avoid installation use \"none\"."
         },
         "murano": {
             "type": "string",
@@ -137,7 +227,25 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Murano client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Murano API client version. To avoid installation use \"none\"."
+        },
+        "neutron": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Neutron API client version. To avoid installation use \"none\"."
+        },
+        "nova": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Nova API client version. To avoid installation use \"none\"."
         },
         "octavia": {
             "type": "string",
@@ -146,7 +254,25 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Octavia client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Octavia Load Balancing client version. To avoid installation use \"none\"."
+        },
+        "panko": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Panko version. To avoid installation use \"none\"."
+        },
+        "qinling": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Qinling (Function as a Service) version. To avoid installation use \"none\"."
         },
         "sahara": {
             "type": "string",
@@ -157,6 +283,15 @@
             "default": "none",
             "description": "Select or enter an OpenStack Sahara client version. To avoid installation use \"none\"."
         },
+        "searchlight": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Searchlight (Indexing and Search API) client version. To avoid installation use \"none\"."
+        },
         "senlin": {
             "type": "string",
             "proposals": [
@@ -164,7 +299,7 @@
                 "none"
             ],
             "default": "none",
-            "description": "Select or enter an OpenStack Senlin client version. To avoid installation use \"none\"."
+            "description": "Select or enter an OpenStack Senlin Clustering API client version. To avoid installation use \"none\"."
         },
         "swift": {
             "type": "string",
@@ -175,6 +310,15 @@
             "default": "none",
             "description": "Select or enter an OpenStack Swift client version. To avoid installation use \"none\"."
         },
+        "tacker": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Tacker client version. To avoid installation use \"none\"."
+        },
         "trove": {
             "type": "string",
             "proposals": [
@@ -183,6 +327,42 @@
             ],
             "default": "none",
             "description": "Select or enter an OpenStack Trove client version. To avoid installation use \"none\"."
+        },
+        "vitrage": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Vitrage (root cause analysis as a Service) client version. To avoid installation use \"none\"."
+        },
+        "watcher": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Watcher (Cloud Optimization as a Service) client version. To avoid installation use \"none\"."
+        },
+        "zaqar": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Zaqar Queueing API client version. To avoid installation use \"none\"."
+        },
+        "zun": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none"
+            ],
+            "default": "none",
+            "description": "Select or enter an OpenStack Zun container management service API client version. To avoid installation use \"none\"."
         }
     },
     "installsAfter": [
