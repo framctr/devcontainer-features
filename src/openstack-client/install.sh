@@ -13,45 +13,72 @@ ensure_nanolayer nanolayer_location "v0.5.0"
 install_package() {
     local package_name=$(echo "$1" | tr '[:upper:]' '[:lower:]') # convert to lowercase
     local package_version="$2"
-
-
-    $nanolayer_location install apt-get pip,python3-dev,gcc
     
     echo "Installing $package_name (version $package_version)..."
 
     if [ "$package_version" != "latest" ] ; then
-        pip install "python-${package_name}client"=="${package_version}"
+        pip install "${package_name}client"=="${package_version}"
     else
-        pip install "python-${package_name}client"
+        pip install "${package_name}client"
     fi
 
     echo "Installed"
 }
 
+# ---------------------
+# Installation
+
+$nanolayer_location install apt-get pip,python3-dev,gcc
+
 # Install primary client
 install_package openstack "$VERSION"
 
 # Install other clients
+
+# e.g., <<PROJECT>>client
 projects=( \
+    AODH \
+    HPLEFTHAND \
+    PANKO \
+    TROVE \
+)
+
+# e.g., python-<<PROJECT>>client
+prefixed_projects=(\
     BARBICAN \
+    BLAZAR \
     CEILOMETER \
     CINDER \
     CLOUDKITTY \
+    CONGRESS \
+    CYBORG \
     DESIGNATE \
-    FUEL \
+    FREEZER \
     GLANCE \
-    GNOCCHI \
+    GLARE \
     HEAT \
+    IRONIC-INSPECTOR- \
+    IRONIC \
+    KARBOR \
+    KEYSTONE \
     MAGNUM \
     MANILA \
     MISTRAL \
     MONASCA \
     MURANO \
+    NEUTRON \
+    NOVA \
     OCTAVIA \
+    QINLING \
     SAHARA \
+    SEARCHLIGHT \
     SENLIN \
     SWIFT \
-    TROVE \
+    TACKER \
+    VITRAGE \
+    WATCHER \
+    ZAQAR \
+    ZUN \
 )
 
 for project in ${projects[@]} ; do
@@ -63,6 +90,14 @@ for project in ${projects[@]} ; do
     fi
 done
 
+for project in ${prefixed_projects[@]} ; do
+    # ${project}  # variable name
+    # ${!project} # variable value
+    
+    if [ -n "${!project}" ] && [ "${!project}" != "none" ] ; then
+        install_package "python-${project}" "${!project}"
+    fi
+done
 
 # if [ -n "${BARBICAN}" ] && [ "${BARBICAN}" != "none" ] ; then
 #     install_package "${!BARBICAN@}" "$BARBICAN" # install the package passing the variable name and value
