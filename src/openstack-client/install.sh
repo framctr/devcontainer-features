@@ -81,8 +81,8 @@ prefixed_projects=(\
 )
 
 for project in ${projects[@]} ; do
-    # ${project}  # variable name
-    # ${!project} # variable value
+    # ${project}  == variable name
+    # ${!project} == variable value
     
     if [ -n "${!project}" ] && [ "${!project}" != "none" ] ; then
         install_package "${project}" "${!project}"
@@ -90,88 +90,12 @@ for project in ${projects[@]} ; do
 done
 
 for project in ${prefixed_projects[@]} ; do
-    # ${project}  # variable name
-    # ${!project} # variable value
+    # ${project}  == variable name
+    # ${!project} == variable value
     
     if [ -n "${!project}" ] && [ "${!project}" != "none" ] ; then
         install_package "python-${project}" "${!project}"
     fi
 done
-
-# if [ -n "${BARBICAN}" ] && [ "${BARBICAN}" != "none" ] ; then
-#     install_package "${!BARBICAN@}" "$BARBICAN" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${CEILOMETER}" ] && [ "${CEILOMETER}" != "none" ] ; then
-#     install_package "${!CEILOMETER@}" "$CEILOMETER" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${CINDER}" ] && [ "${CINDER}" != "none" ] ; then
-#     install_package "${!CINDER@}" "$CINDER" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${CLOUDKITTY}" ] && [ "${CLOUDKITTY}" != "none" ] ; then
-#     install_package "${!CLOUDKITTY@}" "$CLOUDKITTY" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${DESIGNATE}" ] && [ "${DESIGNATE}" != "none" ] ; then
-#     install_package "${!DESIGNATE@}" "$DESIGNATE" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${FUEL}" ] && [ "${FUEL}" != "none" ] ; then
-#     install_package "${!FUEL@}" "$FUEL" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${GLANCE}" ] && [ "${GLANCE}" != "none" ] ; then
-#     install_package "${!GLANCE@}" "$GLANCE" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${GNOCCHI}" ] && [ "${GNOCCHI}" != "none" ] ; then
-#     install_package "${!GNOCCHI@}" "$GNOCCHI" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${HEAT}" ] && [ "${HEAT}" != "none" ] ; then
-#     install_package "${!HEAT@}" "$HEAT" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${MAGNUM}" ] && [ "${MAGNUM}" != "none" ] ; then
-#     install_package "${!MAGNUM@}" "$MAGNUM" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${MANILA}" ] && [ "${MANILA}" != "none" ] ; then
-#     install_package "${!MANILA@}" "$MANILA" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${MISTRAL}" ] && [ "${MISTRAL}" != "none" ] ; then
-#     install_package "${!MISTRAL@}" "$MISTRAL" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${MONASCA}" ] && [ "${MONASCA}" != "none" ] ; then
-#     install_package "${!MONASCA@}" "$MONASCA" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${MURANO}" ] && [ "${MURANO}" != "none" ] ; then
-#     install_package "${!MURANO@}" "$MURANO" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${OCTAVIA}" ] && [ "${OCTAVIA}" != "none" ] ; then
-#     install_package "${!OCTAVIA@}" "$OCTAVIA" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${SAHARA}" ] && [ "${SAHARA}" != "none" ] ; then
-#     install_package "${!SAHARA@}" "$SAHARA" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${SENLIN}" ] && [ "${SENLIN}" != "none" ] ; then
-#     install_package "${!SENLIN@}" "$SENLIN" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${SWIFT}" ] && [ "${SWIFT}" != "none" ] ; then
-#     install_package "${!SWIFT@}" "$SWIFT" # install the package passing the variable name and value
-# fi
-
-# if [ -n "${TROVE}" ] && [ "${TROVE}" != "none" ] ; then
-#     install_package "${!TROVE@}" "$TROVE" # install the package passing the variable name and value
-# fi
 
 echo 'Done!'

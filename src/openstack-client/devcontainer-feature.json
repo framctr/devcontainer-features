@@ -103,15 +103,6 @@
             "default": "none",
             "description": "Select or enter an OpenStack Freezer (backup restore and disaster recovery service) client version. To avoid installation use \"none\"."
         },
-        // "fuel": {
-        //     "type": "string",
-        //     "proposals": [
-        //         "latest",
-        //         "none"
-        //     ],
-        //     "default": "none",
-        //     "description": "Select or enter an OpenStack Fuel client version. To avoid installation use \"none\"."
-        // },
         "glance": {
             "type": "string",
             "proposals": [
@@ -148,15 +139,6 @@
             "default": "none",
             "description": "Select or enter an OpenStack HP LeftHand/StoreVirtual HTTP REST client version. To avoid installation use \"none\"."
         },
-        // "ironic-inspector-": {
-        //     "type": "string",
-        //     "proposals": [
-        //         "latest",
-        //         "none"
-        //     ],
-        //     "default": "none",
-        //     "description": "Select or enter an OpenStack Ironic Inspector client version. To avoid installation use \"none\"."
-        // },
         "ironic": {
             "type": "string",
             "proposals": [
