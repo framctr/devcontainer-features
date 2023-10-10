@@ -1,6 +1,6 @@
 {
     "id": "utils",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "Utilities",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/utils",
     "description": "Install an up-to-date version of various utilities.",
@@ -39,6 +39,11 @@
             "type": "boolean",
             "default": true,
             "description": "Install yq"
+        },
+        "extra_apt_packages": {
+            "type": "string",
+            "default": "",
+            "description": "Extra apt packages comma or space separated"
         }
     },
     "installsAfter": [
