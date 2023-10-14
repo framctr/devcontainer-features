@@ -1,7 +1,7 @@
 {
     "id": "k8sgpt",
     "version": "0.0.1",
-    "name": "krew",
+    "name": "k8sgpt",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/k8sgpt",
     "description": "Install k8sgpt.",
     "options": {
