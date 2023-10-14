@@ -16,7 +16,6 @@ jobs:
           - openstack-client
           - utils
           - k3sup
-          - krew
           - k8sgpt
           - calicoctl
           - rke
@@ -42,9 +41,7 @@ jobs:
         features:
           - openstack-client
           - utils
-          - ansible-galaxy
           - k3sup
-          - krew
           - k8sgpt
           - calicoctl
           - rke
