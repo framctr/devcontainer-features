@@ -1,0 +1,20 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "k8sgpt": {
+                "version": "latest"
+            }
+        },
+        "remoteUser": "vscode"
+    },
+    "specific_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "k8sgpt": {
+                "version": "v0.3.17"
+            }
+        },
+        "remoteUser": "vscode"
+    }
+}

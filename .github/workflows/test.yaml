@@ -18,6 +18,7 @@ jobs:
           - ansible-galaxy
           - k3sup
           - krew
+          - k8sgpt
         baseImage:
           - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
@@ -42,6 +43,7 @@ jobs:
           - ansible-galaxy
           - k3sup
           - krew
+          - k8sgpt
     steps:
       - uses: actions/checkout@v3
 

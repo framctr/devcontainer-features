@@ -1,0 +1,20 @@
+{
+    "id": "k8sgpt",
+    "version": "0.0.1",
+    "name": "krew",
+    "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/k8sgpt",
+    "description": "Install k8sgpt.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a k8sgpt version."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
