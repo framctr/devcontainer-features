@@ -6,6 +6,9 @@
                 "version": "latest"
             }
         },
+        "remoteEnv": {
+            "PATH": "${containerEnv:PATH}:${KREW_ROOT:-$HOME/.krew}/bin"
+        },
         "remoteUser": "vscode"
     }
 }
