@@ -1,5 +1,8 @@
 
 
+## Cloud name
+Please remember to export the `OS_CLOUD` shell variable with the name of the target cloud, otherwise this tool cannot work.
+
 ## OS Support
 
 This Feature should work on recent versions of Ubuntu-based distributions.
