@@ -7,7 +7,7 @@ Install an up-to-date version of various utilities.
 
 ```json
 "features": {
-    "ghcr.io/framctr/devcontainer-features/utils:0": {}
+    "ghcr.io/framctr/devcontainer-features/utils:1": {}
 }
 ```
 
@@ -22,6 +22,7 @@ Install an up-to-date version of various utilities.
 | pip | Install pip | boolean | true |
 | jq | Install jq | boolean | true |
 | yq | Install yq | boolean | true |
+| extra_apt_packages | Extra apt packages comma or space separated | string | - |
 
 
 
