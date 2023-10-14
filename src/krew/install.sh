@@ -14,10 +14,22 @@ if [ "${VERSION}" = "latest" ] ; then
    VERSION=$(curl -s https://api.github.com/repos/kubernetes-sigs/krew/releases/latest | grep "tag_name" | cut -d : -f 2,3 | tr -d \" | tr -d , | tr -d ' ')
 fi
 
-$nanolayer_location \
-    install \
-    devcontainer-feature \
-    "ghcr.io/devcontainers-contrib/features/gh-release:1.0.23" \
-    --option repo='kubernetes-sigs/krew' --option binaryNames='kubectl-krew' --option version="$VERSION"
+# $nanolayer_location \
+#     install \
+#     devcontainer-feature \
+#     "ghcr.io/devcontainers-contrib/features/gh-release:1.0.23" \
+#     --option repo='kubernetes-sigs/krew' --option binaryNames='kubectl-krew' --option version="$VERSION"
+
+(
+  set -x; cd "$(mktemp -d)" &&
+  OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
+  ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
+  KREW="krew-${OS}_${ARCH}" &&
+  curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" &&
+  tar zxvf "${KREW}.tar.gz" &&
+  ./"${KREW}" install krew
+)
+
+echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:${PATH}"' >> ${home}/.bashrc
 
 echo 'Done!'
