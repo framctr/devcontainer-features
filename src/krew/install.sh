@@ -18,6 +18,6 @@ $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-contrib/features/gh-release:1.0.23" \
-    --option repo='kubernetes-sigs/krew' --option binaryNames='krew' --option version="$VERSION"
+    --option repo='kubernetes-sigs/krew' --option binaryNames='kubectl-krew' --option version="$VERSION"
 
 echo 'Done!'
