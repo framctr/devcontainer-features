@@ -9,6 +9,11 @@ set -e
 # Provides the 'check' and 'reportResults' commands.
 source dev-container-features-test-lib
 
+echo ---------------------------------------------------------------------------------------
+check "execute command" bash -c "printenv"
+check "execute command" bash -c "whoami"
+echo ---------------------------------------------------------------------------------------
+
 check "execute command" bash -c "kubectl-krew version"
 
 # Report result
