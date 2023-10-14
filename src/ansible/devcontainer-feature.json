@@ -1,0 +1,21 @@
+{
+    "id": "ansible",
+    "version": "1.0.0",
+    "name": "ansible",
+    "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/ansible",
+    "description": "Install ansible community version.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a ansible version."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-contrib/features/pipx-package",
+        "ghcr.io/devcontainers/features/python"
+    ]
+}

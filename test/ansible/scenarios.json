@@ -1,0 +1,20 @@
+{
+    "latest_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ansible": {
+                "version": "latest"
+            }
+        },
+        "remoteUser": "vscode"
+    },
+    "specific_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ansible": {
+                "version": "8.0.0"
+            }
+        },
+        "remoteUser": "vscode"
+    }
+}
