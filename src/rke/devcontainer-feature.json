@@ -1,0 +1,20 @@
+{
+    "id": "rke",
+    "version": "0.0.1",
+    "name": "rke",
+    "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/rke",
+    "description": "Install rke.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a rke version."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

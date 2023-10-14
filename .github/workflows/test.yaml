@@ -20,6 +20,7 @@ jobs:
           - krew
           - k8sgpt
           - calicoctl
+          - rke
         baseImage:
           - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
@@ -46,6 +47,7 @@ jobs:
           - krew
           - k8sgpt
           - calicoctl
+          - rke
     steps:
       - uses: actions/checkout@v3
 

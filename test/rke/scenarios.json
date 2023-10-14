@@ -1,0 +1,20 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "rke": {
+                "version": "latest"
+            }
+        },
+        "remoteUser": "vscode"
+    },
+    "specific_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "rke": {
+                "version": "v1.4.10"
+            }
+        },
+        "remoteUser": "vscode"
+    }
+}
