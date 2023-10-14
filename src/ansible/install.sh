@@ -16,6 +16,6 @@ $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-contrib/features/pipx-package:1.1.7" \
-    --option package='ansible' --option injections='ansible' --option version="$VERSION"
+    --option package='ansible' --option version="$VERSION"
 
 echo 'Done!'
