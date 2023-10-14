@@ -41,8 +41,8 @@ fi
 )
 
 if [ -n "$_REMOTE_USER" ] ; then
-   mkdir -p $_REMOTE_USER_HOME/.krew/bin
    mv /root/.krew/ $_REMOTE_USER_HOME/
+   tree $_REMOTE_USER_HOME/
    chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.krew/
    echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:${PATH}"' >> "$_REMOTE_USER_HOME/.bashrc"
 else
