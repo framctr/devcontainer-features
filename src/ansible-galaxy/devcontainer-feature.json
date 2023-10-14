@@ -12,7 +12,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainers-contrib/features/ansible",
-        "ghcr.io/devcontainers/features/common-utils"
+        "ghcr.io/devcontainers-contrib/features/ansible"
     ]
 }
