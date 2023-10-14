@@ -1,0 +1,11 @@
+{
+    "id": "k3sup",
+    "version": "0.0.1",
+    "name": "k3sup",
+    "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/k3sup",
+    "description": "Install an k3sup.",
+    "options": {},
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

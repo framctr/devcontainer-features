@@ -1,0 +1,9 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "k3sup": {}
+        },
+        "remoteUser": "vscode"
+    }
+}
