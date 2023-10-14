@@ -7,6 +7,7 @@ echo "--------------------------------------------------------------------------
 
 su - "${_REMOTE_USER}"
 
+echo "${_REMOTE_USER}"
 echo whami
 whoami
 
