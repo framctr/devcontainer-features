@@ -2,7 +2,7 @@
     "check_version": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "ghcr.io/devcontainers-contrib/features/ansible:2": {},
+            "ghcr.io/devcontainers-contrib/features/ansible": {},
             "ansible-galaxy": {
                 "collections": "cloud.terraform openstack.cloud"
             }
