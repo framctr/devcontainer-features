@@ -40,7 +40,15 @@ fi
   ./"${KREW}" install krew
 )
 
-echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:${PATH}"' >> "$HOME/.bashrc"
+if [ -n "$_REMOTE_USER" ] ; then
+   mkdir -p $_REMOTE_USER_HOME/.krew/bin
+   mv /root/.krew/bin/kubectl-krew $_REMOTE_USER_HOME/.krew/bin/
+   chown $_REMOTE_USER $_REMOTE_USER_HOME/.krew/bin/kubectl-krew
+   echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:${PATH}"' >> "$_REMOTE_USER_HOME/.bashrc"
+else
+   echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:${PATH}"' >> "$HOME/.bashrc"
+fi
+
 
 find / -name kubectl-krew 2> /dev/null
 
