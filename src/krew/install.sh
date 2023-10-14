@@ -32,4 +32,6 @@ fi
 
 echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:${PATH}"' >> "$HOME/.bashrc"
 
+find / -name kubectl-krew 2> /dev/null
+
 echo 'Done!'
