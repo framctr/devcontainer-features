@@ -17,7 +17,7 @@ check "execute command" bash -c "pip --version"
 check "execute command" bash -c "jq --version"
 check "execute command" bash -c "yq --version"
 check "execute command" bash -c "tmux -V"
-check "execute command" bash -c "fortune"
+check "execute command" bash -c "vim --version"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

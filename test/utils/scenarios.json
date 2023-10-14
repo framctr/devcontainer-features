@@ -9,7 +9,7 @@
                 "wget": true,
                 "jq": true,
                 "yq": true,
-                "extra_apt_packages": "tmux fortune-mod"
+                "extra_apt_packages": "tmux vim"
             }
         },
         "remoteUser": "vscode"
