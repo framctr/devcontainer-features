@@ -14,6 +14,4 @@ $nanolayer_location install apt-get curl
 
 curl -sLS https://get.k3sup.dev | sh
 
-mv k3sup /usr/local/bin
-
 echo 'Done!'
