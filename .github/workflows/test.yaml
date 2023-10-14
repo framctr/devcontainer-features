@@ -16,6 +16,7 @@ jobs:
           - openstack-client
           - utils
           - ansible-galaxy
+          - k3sup
         baseImage:
           - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
@@ -38,6 +39,7 @@ jobs:
           - openstack-client
           - utils
           - ansible-galaxy
+          - k3sup
     steps:
       - uses: actions/checkout@v3
 
