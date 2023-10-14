@@ -21,6 +21,7 @@ jobs:
           - k8sgpt
           - calicoctl
           - rke
+          - talosctl
         baseImage:
           - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
@@ -48,6 +49,7 @@ jobs:
           - k8sgpt
           - calicoctl
           - rke
+          - talosctl
     steps:
       - uses: actions/checkout@v3
 
