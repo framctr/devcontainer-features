@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - ansible
           - openstack-client
           - utils
           - k3sup
@@ -39,6 +40,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - ansible
           - openstack-client
           - utils
           - k3sup
