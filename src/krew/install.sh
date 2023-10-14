@@ -30,6 +30,6 @@ fi
   ./"${KREW}" install krew
 )
 
-echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:${PATH}"' >> ${home}/.bashrc
+echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:${PATH}"' >> "$HOME/.bashrc"
 
 echo 'Done!'
