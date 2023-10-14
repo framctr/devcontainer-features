@@ -9,6 +9,8 @@ if [ -n "$_REMOTE_USER" ]; then
    su - $_REMOTE_USER
 fi
 
+whoami
+
 . ./library_scripts.sh
 
 # nanolayer is a cli utility which keeps container layers as small as possible
@@ -29,6 +31,7 @@ fi
 #     --option repo='kubernetes-sigs/krew' --option binaryNames='kubectl-krew' --option version="$VERSION"
 
 (
+  whoami
   set -x; cd "$(mktemp -d)" &&
   OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
   ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
