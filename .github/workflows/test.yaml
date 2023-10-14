@@ -15,6 +15,7 @@ jobs:
         features:
           - openstack-client
           - utils
+          - ansible-galaxy
         baseImage:
           - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
@@ -36,6 +37,7 @@ jobs:
         features:
           - openstack-client
           - utils
+          - ansible-galaxy
     steps:
       - uses: actions/checkout@v3
 
