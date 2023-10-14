@@ -1,6 +1,6 @@
 {
     "id": "talosctl",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "name": "talosctl",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/talosctl",
     "description": "Install talosctl.",

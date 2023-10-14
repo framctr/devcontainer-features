@@ -1,6 +1,6 @@
 {
     "id": "rke",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "name": "rke",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/rke",
     "description": "Install rke.",

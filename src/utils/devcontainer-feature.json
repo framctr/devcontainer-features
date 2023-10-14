@@ -1,6 +1,6 @@
 {
     "id": "utils",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "name": "Utilities",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/utils",
     "description": "Install an up-to-date version of various utilities.",
