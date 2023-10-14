@@ -11,9 +11,9 @@ source dev-container-features-test-lib
 
 echo ---------------------------------------------------------------------------------------
 check "execute command" bash -c "printenv"
-check "execute command" bash -c "ls -l ${KREW_ROOT:-$HOME/.krew}/bin"
-check "execute command" bash -c "ls -l ${KREW_ROOT:-$HOME/.krew}"
-check "execute command" bash -c "ls -l ${KREW_ROOT:-$HOME}"
+check "execute command" bash -c "ls -la ${KREW_ROOT:-$HOME/.krew}/bin"
+check "execute command" bash -c "ls -la ${KREW_ROOT:-$HOME/.krew}"
+check "execute command" bash -c "ls -la ${KREW_ROOT:-$HOME}"
 check "execute command" bash -c "whoami"
 echo ---------------------------------------------------------------------------------------
 
