@@ -4,9 +4,15 @@
     "name": "krew",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/krew",
     "description": "Install krew.",
-    "options": {},
-    "containerEnv": {
-        "PATH": "${containerEnv:PATH}:/home/vscode/.krew/bin"
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select or enter a krew version."
+        }
     },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"

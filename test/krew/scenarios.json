@@ -2,7 +2,9 @@
     "check_version": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "krew": {}
+            "krew": {
+                "version": "latest"
+            }
         },
         "remoteUser": "vscode"
     }
