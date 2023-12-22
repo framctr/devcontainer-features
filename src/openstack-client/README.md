@@ -1,7 +1,7 @@
 
-# OpenStack Client (from pipx) (openstack-client)
+# OpenStack Client (openstack-client)
 
-Install an up-to-date version of OpenStack client with pipx.
+Install an up-to-date version of OpenStack client.
 
 ## Example Usage
 
