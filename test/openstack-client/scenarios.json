@@ -31,7 +31,8 @@
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "openstack-client": {
-                "version": "6.3.0"
+                "version": "6.3.0",
+                "octavia": "3.6.0"
             }
         },
         "remoteUser": "vscode"
