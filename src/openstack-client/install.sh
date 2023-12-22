@@ -19,7 +19,7 @@ install_package() {
 # ---------------------
 # Installation
 
-apt-get install -y pip python3-dev gcc
+apt-get update && apt-get install -y pip python3-dev gcc
 
 # Install primary client
 install_package python-openstack "$VERSION"
