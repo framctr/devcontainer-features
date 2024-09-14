@@ -2,7 +2,7 @@
 
 ## Version
 
-This feature installs the ansible community version.
+This feature installs ansible.
 
 ## OS Support
 

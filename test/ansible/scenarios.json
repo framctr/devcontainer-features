@@ -1,10 +1,8 @@
 {
-    "latest_version": {
+    "default_values": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "ansible": {
-                "version": "latest"
-            }
+            "ansible": {}
         },
         "remoteUser": "vscode"
     },
@@ -12,7 +10,18 @@
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "ansible": {
+                "package": "ansible",
                 "version": "8.0.0"
+            }
+        },
+        "remoteUser": "vscode"
+    },
+    "core_specific_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ansible": {
+                "package": "ansible-core",
+                "version": "2.16.3"
             }
         },
         "remoteUser": "vscode"
