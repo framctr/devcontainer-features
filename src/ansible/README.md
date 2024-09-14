@@ -7,7 +7,7 @@ Install ansible.
 
 ```json
 "features": {
-    "ghcr.io/framctr/devcontainer-features/ansible:1": {}
+    "ghcr.io/framctr/devcontainer-features/ansible:2": {}
 }
 ```
 
