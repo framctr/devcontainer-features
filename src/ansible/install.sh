@@ -11,7 +11,7 @@ set -e
 # of the script
 ensure_nanolayer nanolayer_location "v0.5.0"
 
-$nanolayer_location install apt-get pip
+$nanolayer_location install apt-get pip,python3-dev
 
 if [ "$PACKAGE" != "latest" ] ; then
     pip install "${PACKAGE}"=="${VERSION}"
