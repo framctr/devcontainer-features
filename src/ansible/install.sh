@@ -14,10 +14,12 @@ ensure_nanolayer nanolayer_location "v0.5.0"
 $nanolayer_location install apt-get pip,python3-dev
 
 # --break-system-packages required by latest Debian-based distros to install the package system-wide
+EXT_MANAGED_PY=$(pip install --help | grep -o '\-\-break-system-packages')
+
 if [ "$VERSION" != "latest" ] ; then
-    pip install "${PACKAGE}"=="${VERSION}" --break-system-packages
+    pip install "$EXT_MANAGED_PY" "${PACKAGE}"=="${VERSION}"
 else
-    pip install "$PACKAGE" --break-system-packages
+    pip install "$EXT_MANAGED_PY" "$PACKAGE"
 fi
 
 echo 'Done!'
