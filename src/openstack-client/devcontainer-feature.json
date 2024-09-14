@@ -1,6 +1,6 @@
 {
     "id": "openstack-client",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "name": "OpenStack Client (via pipx)",
     "documentationURL": "https://github.com/framctr/devcontainer-features/tree/main/src/openstack-client",
     "description": "Install an up-to-date version of OpenStack client via pipx.",
