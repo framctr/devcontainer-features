@@ -11,12 +11,13 @@ set -e
 # of the script
 ensure_nanolayer nanolayer_location "v0.5.0"
 
-$nanolayer_location install apt-get pipx,python3-dev
+$nanolayer_location install apt-get pip,python3-dev
 
+# --break-system-packages required by latest Debian-based distros to install the package system-wide
 if [ "$VERSION" != "latest" ] ; then
-    pipx install "${PACKAGE}"=="${VERSION}"
+    pip install "${PACKAGE}"=="${VERSION}" --break-system-packages
 else
-    pipx install "$PACKAGE"
+    pip install "$PACKAGE" --break-system-packages
 fi
 
 echo 'Done!'
