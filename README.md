@@ -1,6 +1,7 @@
 # devcontainer-features
 
 [Devcontainer features](https://containers.dev/) to be used to build dev-ops environments:
+- [Ansible](https://www.ansible.com/) in [ansible folder](./src/ansible/).
 - [Calico](https://docs.tigera.io/calico/latest/reference/calicoctl/) in [calicoctl folder](./src/calicoctl/).
 - [k3sup](https://github.com/alexellis/k3sup) in [k3sup folder](./src/k3sup/).
 - [k8sgpt](https://github.com/k8sgpt-ai/k8sgpt) in [k8sgpt folder](./src/k8sgpt/).
