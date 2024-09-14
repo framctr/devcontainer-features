@@ -1,7 +1,7 @@
 
 # ansible (ansible)
 
-Install ansible community version.
+Install ansible.
 
 ## Example Usage
 
@@ -15,13 +15,14 @@ Install ansible community version.
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select or enter a ansible version. | string | latest |
+| package | Select the kind of package to install. | string | ansible-core |
+| version | Select or enter an ansible version. | string | latest |
 
 
 
 ## Version
 
-This feature installs the ansible community version.
+This feature installs ansible.
 
 ## OS Support
 
