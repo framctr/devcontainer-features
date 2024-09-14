@@ -22,6 +22,7 @@ jobs:
           - rke
           - talosctl
         baseImage:
+          - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
           - mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04
           - mcr.microsoft.com/vscode/devcontainers/base:ubuntu-24.04

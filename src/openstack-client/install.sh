@@ -10,6 +10,11 @@ set -e
 # of the script
 ensure_nanolayer nanolayer_location "v0.5.0"
 
+$nanolayer_location install apt-get pip,python3-dev,gcc
+
+# --break-system-packages required by latest Debian-based distros to install the package system-wide
+EXT_MANAGED_PY=$(pip install --help | grep -o '\-\-break-system-packages' | cat) # cat prevents grep to exit with error if not matching
+
 install_package() {
     local package_name=$(echo "$1" | tr '[:upper:]' '[:lower:]') # convert to lowercase
     local package_version="$2"
@@ -17,9 +22,9 @@ install_package() {
     echo "Installing $package_name (version $package_version)..."
 
     if [ "$package_version" != "latest" ] ; then
-        pip install "${package_name}client"=="${package_version}"
+        pip install $EXT_MANAGED_PY "${package_name}client"=="${package_version}"
     else
-        pip install "${package_name}client"
+        pip install $EXT_MANAGED_PY "${package_name}client"
     fi
 
     echo "Installed"
@@ -27,8 +32,6 @@ install_package() {
 
 # ---------------------
 # Installation
-
-$nanolayer_location install apt-get pip,python3-dev,gcc
 
 # Install primary client
 install_package python-openstack "$VERSION"
