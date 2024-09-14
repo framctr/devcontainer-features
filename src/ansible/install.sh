@@ -17,9 +17,9 @@ $nanolayer_location install apt-get pip,python3-dev
 EXT_MANAGED_PY=$(pip install --help | grep -o '\-\-break-system-packages' | cat) # cat prevents grep to exit with error if not matching
 
 if [ "$VERSION" != "latest" ] ; then
-    pip install "$EXT_MANAGED_PY" "${PACKAGE}"=="${VERSION}"
+    pip install $EXT_MANAGED_PY "${PACKAGE}"=="${VERSION}"
 else
-    pip install "$EXT_MANAGED_PY" "$PACKAGE"
+    pip install $EXT_MANAGED_PY "$PACKAGE"
 fi
 
 echo 'Done!'
